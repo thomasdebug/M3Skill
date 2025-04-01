@@ -9,7 +9,7 @@ public class Byte : MonoBehaviour
 
     void Update()
     {
-        
+        Bin2Dec();
     }
 
     private void Bin2Dec()
@@ -23,6 +23,12 @@ public class Byte : MonoBehaviour
         if (bits[5].state) { value += 32; }
         if (bits[6].state) { value += 64; }
         if (bits[7].state) { value += 128; }
+    }
+
+    public string getHex()
+    {
+        string HexValue = value.ToString("X2");
+        return HexValue;
     }
 
     public void setValue(int myValue) 
